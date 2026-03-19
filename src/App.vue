@@ -449,19 +449,13 @@ async function printPresentationHtml() {
     </div>
 
     <div class="presentation-actions">
-      <button
-        type="button"
-        class="presentation-actions__button"
-        @click="printPresentationHtml"
-      >
-        Print All Sections
-      </button>
+   
       <button
         type="button"
         class="presentation-actions__button presentation-actions__button--primary"
         @click="exportPresentationHtml"
       >
-        Export HTML
+        Export 
       </button>
     </div>
   </div>
