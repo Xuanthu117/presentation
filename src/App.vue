@@ -273,6 +273,106 @@ const progressPercentage = computed(() => {
 
   return Math.round(((currentSlideIndex.value + 1) / totalSlides) * 100);
 });
+
+function getExportHeadMarkup() {
+  const headNodes = Array.from(
+    document.head.querySelectorAll('style, link[rel="stylesheet"]'),
+  );
+
+  return headNodes.map((node) => node.outerHTML).join("\n");
+}
+
+function buildPresentationHtmlDocument() {
+  const renderedSlides = containerRef.value?.innerHTML ?? "";
+  const headMarkup = getExportHeadMarkup();
+
+  return `<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Ultimate Debug Toolkit Masterclass</title>
+    ${headMarkup}
+    <style>
+      html,
+      body {
+        width: 100%;
+        min-height: 100%;
+        margin: 0;
+        background: #0f172a;
+      }
+
+      .export-shell {
+        width: 100%;
+      }
+
+      .snap-container {
+        height: auto !important;
+        overflow: visible !important;
+        scroll-snap-type: none !important;
+      }
+
+      .slide {
+        min-height: 100vh;
+        break-after: page;
+        page-break-after: always;
+      }
+
+      .slide:last-child {
+        break-after: auto;
+        page-break-after: auto;
+      }
+
+      @media print {
+        body {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="export-shell">
+      <div class="snap-container">${renderedSlides}</div>
+    </main>
+  </body>
+</html>`;
+}
+
+async function exportPresentationHtml() {
+  await nextTick();
+
+  const htmlDocument = buildPresentationHtmlDocument();
+  const blob = new Blob([htmlDocument], { type: "text/html" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+
+  link.href = url;
+  link.download = "presentation-export.html";
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+}
+
+async function printPresentationHtml() {
+  await nextTick();
+
+  const printWindow = globalThis.open("", "_blank", "noopener,noreferrer");
+
+  if (!printWindow) {
+    return;
+  }
+
+  printWindow.document.open();
+  printWindow.document.write(buildPresentationHtmlDocument());
+  printWindow.document.close();
+
+  globalThis.setTimeout(() => {
+    printWindow.focus();
+    printWindow.print();
+  }, 250);
+}
 </script>
 
 <template>
@@ -346,6 +446,23 @@ const progressPercentage = computed(() => {
       <span class="slide-indicator__progress-text"
         >{{ progressPercentage }}%</span
       >
+    </div>
+
+    <div class="presentation-actions">
+      <button
+        type="button"
+        class="presentation-actions__button"
+        @click="printPresentationHtml"
+      >
+        Print All Sections
+      </button>
+      <button
+        type="button"
+        class="presentation-actions__button presentation-actions__button--primary"
+        @click="exportPresentationHtml"
+      >
+        Export HTML
+      </button>
     </div>
   </div>
 </template>
