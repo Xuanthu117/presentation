@@ -1,9 +1,14 @@
 <script setup lang="ts">
 import BaseSlide from '../BaseSlide.vue';
+
+const props = defineProps<{
+  id: number
+  number:number
+}>()
 </script>
 
 <template>
-  <BaseSlide id="slide-4" number="04">
+  <BaseSlide :id="props.id" :number="props.number">
     <div class="mx-auto w-full max-w-5xl">
       <h2 class="mb-6 text-center text-4xl font-bold tracking-tight text-white italic">
         Debug = <span class="text-cyan-400">Scientific Method</span>

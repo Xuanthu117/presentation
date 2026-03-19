@@ -1,9 +1,14 @@
 <script setup lang="ts">
 import BaseSlide from '../BaseSlide.vue';
+
+const props = defineProps<{
+  id: number
+  number:number
+}>()
 </script>
 
 <template>
-  <BaseSlide id="slide-14" number="14">
+  <BaseSlide :id="props.id" :number="props.number">
     <div class="mx-auto w-full max-w-6xl">
       <div class="mb-10 text-center">
         <span class="mb-4 inline-flex items-center gap-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 px-4 py-1 text-sm font-bold text-cyan-400">
@@ -68,7 +73,7 @@ import BaseSlide from '../BaseSlide.vue';
             </div>
 
             <div class="mt-4 rounded-lg bg-slate-900/80 p-3 border border-purple-500/20">
-              <p class="text-[11px] text-purple-300 italic">
+              <p class="text-md text-purple-300 italic">
                 ⚠️ Cảnh báo: Luôn kiểm tra lại code AI gợi ý. Nó có thể "hallucinate" (ảo tưởng) ra các hàm không tồn tại trong project của bạn.
               </p>
             </div>

@@ -1,12 +1,17 @@
 <script setup lang="ts">
 import BaseSlide from '../BaseSlide.vue';
+
+const props = defineProps<{
+  id: number
+  number:number
+}>()
 </script>
 
 <template>
-  <BaseSlide id="slide-12" number="12">
+  <BaseSlide :id="props.id" :number="props.number">
     <div class="mx-auto w-full max-w-6xl">
       <h2 class="mb-12 text-center text-4xl font-bold tracking-tight text-white italic">
-        <img src="/public/assets/womm.avif" alt="Curse" class="inline-block  w-48 -rotate-12" />
+        <img src="/assets/womm.avif" alt="Curse" class="inline-block  w-48 -rotate-12" />
         Tiêu Diệt Lời Nguyền <span class="text-red-500">"Works On My Machine"</span>
         
       </h2>

@@ -1,12 +1,12 @@
 <script setup lang="ts">
 defineProps<{
-  id: string
-  number: string
+  id: number
+  number:number
 }>()
 </script>
 
 <template>
-  <section :id="id" class="slide">
+  <section :id="id.toString()" class="slide">
     <div class="slide-number">{{ number }}</div>
     <slot />
   </section>

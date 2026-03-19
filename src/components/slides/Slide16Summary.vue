@@ -1,10 +1,15 @@
 <script setup lang="ts">
 import BaseSlide from '../BaseSlide.vue';
 import ImpactBarChart from '../charts/ImpactBarChart.vue';
+
+const props = defineProps<{
+  id: number
+  number:number
+}>()
 </script>
 
 <template>
-  <BaseSlide id="slide-16" number="16">
+  <BaseSlide :id="props.id" :number="props.number">
     <div class="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-2">
       
       <div class="flex flex-col justify-center">

@@ -1,16 +1,21 @@
 <script setup lang="ts">
 import BaseSlide from '../BaseSlide.vue';
+
+const props = defineProps<{
+  id: number
+  number:number
+}>()
 </script>
 
 <template>
-  <BaseSlide id="slide-2" number="02">
+  <BaseSlide :id="props.id" :number="props.number">
     <div class="mx-auto w-full max-w-5xl text-center">
       <h2 class="mb-12 text-4xl font-bold text-white">
         Từ "Fix Bug" đến "Observability"
       </h2>
 
       <img
-        src="/public/assets/fixbug.webp"
+        src="/assets/fixbug.webp"
         alt="Curse"
         class="inline-block w-full max-w-xs mx-auto mb-12"
       />

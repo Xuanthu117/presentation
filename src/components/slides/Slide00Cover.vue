@@ -1,10 +1,14 @@
 <script setup lang="ts">
 import BaseSlide from '../BaseSlide.vue';
-import TimeAllocationChart from '../charts/TimeAllocationChart.vue';
+
+const props = defineProps<{
+  id: number
+  number:number
+}>()
 </script>
 
 <template>
-  <BaseSlide id="slide-1" number="01">
+  <BaseSlide :id="props.id" :number="props.number">
     <div class="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-1">
       <div>
         <h1 class="mb-6 text-4xl font-extrabold leading-tight tracking-tight md:text-5xl">

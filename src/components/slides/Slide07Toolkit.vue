@@ -1,10 +1,15 @@
 <script setup lang="ts">
 import BaseSlide from '../BaseSlide.vue';
 import ToolkitRadarChart from '../charts/ToolkitRadarChart.vue';
+
+const props = defineProps<{
+  id: number
+  number:number
+}>()
 </script>
 
 <template>
-  <BaseSlide id="slide-7" number="07">
+  <BaseSlide :id="props.id" :number="props.number">
     <div class="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-2">
       <div>
         <h2 class="mb-8 text-4xl font-bold text-white">Debug Toolkit Đa Tầng</h2>

@@ -1,9 +1,14 @@
 <script setup lang="ts">
 import BaseSlide from '../BaseSlide.vue';
+
+const props = defineProps<{
+  id: number
+  number:number
+}>()
 </script>
 
 <template>
-  <BaseSlide id="slide-15" number="15">
+  <BaseSlide :id="props.id" :number="props.number">
     <div class="mx-auto w-full max-w-5xl">
       <div class="mb-12 text-center">
         <h2 class="text-4xl font-black tracking-tight text-white uppercase">
@@ -20,7 +25,7 @@ import BaseSlide from '../BaseSlide.vue';
             <div class="mb-4 flex h-32 w-32 items-center justify-center rounded-2xl border-2 border-purple-500/20 bg-slate-800 shadow-lg transition-all group-hover:-translate-y-2 group-hover:border-purple-500 group-hover:shadow-purple-500/20">
               <div class="text-center">
                 <div class="mb-1 text-4xl transition-transform group-hover:scale-110">🧘‍♂️</div>
-                <div class="text-[11px] font-black uppercase tracking-tighter text-purple-400">Stoicism</div>
+                <div class="text-md font-black uppercase tracking-tighter text-purple-400">Stoicism</div>
               </div>
             </div>
             <p class="text-center text-sm font-bold text-white leading-tight">Bình tĩnh tuyệt đối<br/>khi Prod sập</p>
@@ -30,7 +35,7 @@ import BaseSlide from '../BaseSlide.vue';
             <div class="mb-4 flex h-32 w-32 items-center justify-center rounded-2xl border-2 border-purple-500/20 bg-slate-800 shadow-lg transition-all group-hover:-translate-y-2 group-hover:border-purple-500 group-hover:shadow-purple-500/20">
               <div class="text-center">
                 <div class="mb-1 text-4xl transition-transform group-hover:scale-110">🕵️‍♂️</div>
-                <div class="text-[11px] font-black uppercase tracking-tighter text-purple-400">Evidence</div>
+                <div class="text-md font-black uppercase tracking-tighter text-purple-400">Evidence</div>
               </div>
             </div>
             <p class="text-center text-sm font-bold text-white leading-tight">Tuyệt đối<br/>không đoán mò</p>
@@ -40,7 +45,7 @@ import BaseSlide from '../BaseSlide.vue';
             <div class="mb-4 flex h-32 w-32 items-center justify-center rounded-2xl border-2 border-purple-500/20 bg-slate-800 shadow-lg transition-all group-hover:-translate-y-2 group-hover:border-purple-500 group-hover:shadow-purple-500/20">
               <div class="text-center">
                 <div class="mb-1 text-4xl transition-transform group-hover:scale-110">⏳</div>
-                <div class="text-[11px] font-black uppercase tracking-tighter text-purple-400">Persistence</div>
+                <div class="text-md font-black uppercase tracking-tighter text-purple-400">Persistence</div>
               </div>
             </div>
             <p class="text-center text-sm font-bold text-white leading-tight">Kiên nhẫn<br/>đến tận cùng</p>
@@ -50,7 +55,7 @@ import BaseSlide from '../BaseSlide.vue';
             <div class="mb-4 flex h-32 w-32 items-center justify-center rounded-2xl border-2 border-purple-500/20 bg-slate-800 shadow-lg transition-all group-hover:-translate-y-2 group-hover:border-purple-500 group-hover:shadow-purple-500/20">
               <div class="text-center">
                 <div class="mb-1 text-4xl transition-transform group-hover:scale-110">🤝</div>
-                <div class="text-[11px] font-black uppercase tracking-tighter text-purple-400">Culture</div>
+                <div class="text-md font-black uppercase tracking-tighter text-purple-400">Culture</div>
               </div>
             </div>
             <p class="text-center text-sm font-bold text-white leading-tight">Văn hóa<br/>không đổ lỗi</p>

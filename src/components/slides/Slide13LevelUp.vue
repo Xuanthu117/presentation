@@ -1,9 +1,14 @@
 <script setup lang="ts">
 import BaseSlide from '../BaseSlide.vue';
+
+const props = defineProps<{
+  id: number
+  number:number
+}>()
 </script>
 
 <template>
-  <BaseSlide id="slide-13" number="13">
+  <BaseSlide :id="props.id" :number="props.number">
     <div class="mx-auto w-full max-w-5xl">
       <div class="mb-10 text-center">
         <span class="mb-4 inline-flex items-center gap-2 rounded-full bg-yellow-500/10 border border-yellow-500/20 px-4 py-1 text-sm font-bold text-yellow-500 shadow-sm">
@@ -21,7 +26,7 @@ import BaseSlide from '../BaseSlide.vue';
           <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-yellow-500/10 text-3xl transition-transform group-hover:scale-110">🤔</div>
           <div>
             <h3 class="text-lg font-bold text-white">Kỹ thuật "5 Whys"</h3>
-            <p class="mt-2 text-[13px] leading-relaxed text-slate-400 italic">
+            <p class="mt-2 text-md leading-relaxed text-slate-400 italic">
               Đừng dừng lại ở việc fix lỗi. Hãy hỏi "Tại sao?" cho đến khi tìm thấy lỗi thiết kế hoặc lỗi tư duy ban đầu.
               <span class="block mt-2 font-semibold text-yellow-500/80">→ Hiểu bản chất > Fix triệu chứng.</span>
             </p>
@@ -32,7 +37,7 @@ import BaseSlide from '../BaseSlide.vue';
           <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-yellow-500/10 text-3xl transition-transform group-hover:scale-110">🛑</div>
           <div>
             <h3 class="text-lg font-bold text-white">Nói không với "Quick Fix"</h3>
-            <p class="mt-2 text-[13px] leading-relaxed text-slate-400 italic">
+            <p class="mt-2 text-md leading-relaxed text-slate-400 italic">
               Một dòng code sửa tạm bợ hôm nay là 10 giờ OT ngày mai. Luôn viết Unit Test cho bug vừa tìm thấy.
               <span class="block mt-2 font-semibold text-yellow-500/80">→ Regression Test là tấm khiên bảo vệ bạn.</span>
             </p>
@@ -43,7 +48,7 @@ import BaseSlide from '../BaseSlide.vue';
           <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-yellow-500/10 text-3xl transition-transform group-hover:scale-110">🥋</div>
           <div>
             <h3 class="text-lg font-bold text-white">Thám hiểm node_modules</h3>
-            <p class="mt-2 text-[13px] leading-relaxed text-slate-400 italic">
+            <p class="mt-2 text-md leading-relaxed text-slate-400 italic">
               Khi gặp bug thư viện, đừng ngại nhảy vào Source Code của nó. Đây là cách nhanh nhất để học kiến trúc code từ các chuyên gia hàng đầu thế giới.
               <span class="block mt-2 font-semibold text-yellow-500/80">→ Nâng tầm từ User lên Contributor.</span>
             </p>
@@ -54,7 +59,7 @@ import BaseSlide from '../BaseSlide.vue';
           <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-yellow-500/10 text-3xl transition-transform group-hover:scale-110">🧰</div>
           <div>
             <h3 class="text-lg font-bold text-white">Mài bén "Vũ khí"</h3>
-            <p class="mt-2 text-[13px] leading-relaxed text-slate-400 italic">
+            <p class="mt-2 text-md leading-relaxed text-slate-400 italic">
               Làm chủ IDE Shortcuts, Debugger Breakpoints, và các công cụ Monitor như Datadog/Sentry.
               <span class="block mt-2 font-semibold text-yellow-500/80">→ Tiết kiệm 30% thời gian thao tác thừa.</span>
             </p>
