@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  width: 100%;
+}
+
+body {
+  background-color: #0f172a;
+  color: #f8fafc;
+  font-family: system-ui, -apple-system, sans-serif;
+  padding: 0;
+}
+
+#app {
+  height: 100vh;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+
+.snap-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.snap-container::-webkit-scrollbar {
+  display: none;
+}
+
+.slide {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  overflow-y: auto;
+}
+
+.chart-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 30vh;
+  max-height: 350px;
+}
+
+@media (min-width: 768px) {
+  .chart-container {
+    height: 40vh;
+  }
+}
+
+.card {
+  background-color: #1e293b;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  /* border-top: 4px solid #06b6d4; */
+}
+
+.card-pink {
+  border-top-color: #ec4899;
+}
+
+.card-yellow {
+  border-top-color: #f59e0b;
+}
+
+.card-green {
+  border-top-color: #10b981;
+}
+
+.card-red {
+  border-top-color: #ef4444;
+}
+
+.card-cyan {
+  border-top-color: #06b6d4;
+}
+
+.flow-node {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  position: relative;
+}
+
+.flow-arrow {
+  font-size: 2rem;
+  color: #06b6d4;
+  text-align: center;
+  margin: -0.5rem 0;
+}
+
+.text-gradient-cyan {
+  background: -webkit-linear-gradient(45deg, #06b6d4, #8b5cf6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.slide-number {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.1);
+}
