@@ -27,6 +27,9 @@ import Slide15Profile from './components/slides/Slide15Profile.vue';
 import Slide16Summary from './components/slides/Slide16Summary.vue';
 import Slide17Cta from './components/slides/Slide17Cta.vue';
 import SlideBETools from './components/slides/SlideBETools.vue';
+import SlideExampleDevtools from './components/slides/SlideExampleDevtools.vue';
+import SlideExamplePerformance
+  from './components/slides/SlideExamplePerformance.vue';
 import SlideFETools from './components/slides/SlideFETools.vue';
 import SlideQATools from './components/slides/SlideQATools.vue';
 
@@ -251,6 +254,14 @@ const Slides = computed(() => {
       number: 20,
       component: Slide17Cta,
     },
+    {id: 21,
+      number: 21,
+      component: SlideExampleDevtools,
+    },{
+      id: 22,
+      number: 22,
+      component: SlideExamplePerformance,
+    }
   ];
 });
 </script>
