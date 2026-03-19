@@ -62,7 +62,7 @@ const props = defineProps<{
 
           <div class="mb-6 text-center">
             <h3 class="mb-1 text-2xl font-bold text-white">Tác động của Advanced Toolkit đến MTTR</h3>
-            <p class="text-sm font-medium text-slate-400">So sánh thời gian xử lý bug cực đoan (Phút)</p>
+            <p class="text-md font-medium text-slate-400">So sánh thời gian xử lý bug cực đoan (Phút)</p>
           </div>
 
           <div class="relative h-[320px] w-full md:h-[380px]">

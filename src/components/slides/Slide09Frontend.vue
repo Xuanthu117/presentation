@@ -20,7 +20,7 @@ const props = defineProps<{
             <span class="text-3xl transition-transform group-hover:scale-110">🎨</span>
             <h3 class="text-xl font-bold text-white">Lớp Ngoài (UI)</h3>
           </div>
-          <ul class="space-y-3 text-sm text-slate-400">
+          <ul class="space-y-3 text-md text-slate-400">
             <li class="flex gap-2">
               <span class="text-cyan-500 font-bold">✔</span>
               <span><b>Network:</b> Kiểm tra <code>Payload</code> (Data gửi đi) & <code>Preview</code> (Data trả về) để biết lỗi tại BE hay FE.</span>
@@ -41,7 +41,7 @@ const props = defineProps<{
             <span class="text-3xl transition-transform group-hover:scale-110">🔥</span>
             <h3 class="text-xl font-bold text-cyan-400">Hiệu năng (Perf)</h3>
           </div>
-          <ul class="space-y-3 text-sm text-slate-400">
+          <ul class="space-y-3 text-md text-slate-400">
             <li class="flex gap-2">
               <span class="text-cyan-500 font-bold">✔</span>
               <span><b>Flamegraphs:</b> Tìm "Long Tasks" hoặc các component bị Re-render liên tục gây giật lag (Jank).</span>
@@ -62,7 +62,7 @@ const props = defineProps<{
             <span class="text-3xl transition-transform group-hover:scale-110">🧠</span>
             <h3 class="text-xl font-bold text-purple-400">Chuyên sâu (Core)</h3>
           </div>
-          <ul class="space-y-3 text-sm text-slate-400">
+          <ul class="space-y-3 text-md text-slate-400">
             <li class="flex gap-2">
               <span class="text-purple-500 font-bold">✔</span>
               <span><b>Memory Leak:</b> Dùng <code>Heap Snapshot</code> tìm Detached DOM (Element đã bị xóa khỏi UI nhưng vẫn nằm trong RAM).</span>
@@ -84,7 +84,7 @@ const props = defineProps<{
           <span class="text-xl font-bold text-cyan-100">
             💡 <span class="text-cyan-400 italic">"The Console is not enough."</span>
           </span>
-          <p class="max-w-2xl text-sm text-slate-400 leading-relaxed">
+          <p class="max-w-2xl text-md text-slate-400 leading-relaxed">
             Hơn 80% bug Frontend nghiêm trọng không nằm ở Syntax, mà nằm ở <b>Data Flow</b> sai lệch, 
             <b>State</b> không đồng nhất và <b>Memory Leak</b> làm chậm trình duyệt theo thời gian.
           </p>

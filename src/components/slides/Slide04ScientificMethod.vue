@@ -65,7 +65,7 @@ const props = defineProps<{
           <div class="text-2xl font-black text-yellow-400">
             CHỈ THAY ĐỔI <span class="rounded bg-yellow-400 px-2 py-0.5 text-slate-900">01 BIẾN SỐ</span> MỖI LẦN!
           </div>
-          <p class="mt-3 text-sm text-slate-400 italic">
+          <p class="mt-3 text-md text-slate-400 italic">
             Nếu bạn đổi 3 thứ cùng lúc và bug biến mất, bạn sẽ không bao giờ biết thứ nào thực sự là thủ phạm.
           </p>
           <div class="absolute -right-4 -top-4 h-16 w-16 rotate-12 bg-yellow-500/10 blur-xl"></div>

@@ -80,13 +80,13 @@ const props = defineProps<{
             </h3>
             <div class="space-y-4">
               <div class="rounded-lg bg-red-500/5 p-3 border border-red-500/10">
-                <b class="text-sm text-red-300">Sentry Breadcrumbs</b>
+                <b class="text-md text-red-300">Sentry Breadcrumbs</b>
                 <p class="text-md text-slate-400 mt-1 italic">
                   Xem lại "lịch sử hành vi" của ứng dụng 5 phút trước khi crash: Request nào đã gọi, DB trả về gì?
                 </p>
               </div>
               <div class="rounded-lg bg-slate-800 p-3 border border-slate-700">
-                <b class="text-sm text-slate-200">Memory Dump Analysis</b>
+                <b class="text-md text-slate-200">Memory Dump Analysis</b>
                 <p class="text-md text-slate-400 mt-1 italic">
                   Phân tích file Heap Dump để tìm thủ phạm gây OutOfMemory (OOM).
                 </p>

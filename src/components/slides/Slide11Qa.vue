@@ -20,7 +20,7 @@ const props = defineProps<{
         <div class="group relative overflow-hidden rounded-2xl bg-slate-800/50 p-6 border border-slate-700 transition-all hover:border-slate-500">
           <div class="mb-4 text-4xl group-hover:scale-110 transition-transform">✍️</div>
           <h3 class="mb-2 text-xl font-bold text-white">Art of Reporting</h3>
-          <p class="text-sm leading-relaxed text-slate-400">
+          <p class="text-md leading-relaxed text-slate-400">
             Không chỉ là Steps/Expected. Một QA giỏi tìm ra <b>"Minimal Path"</b> (đường ngắn nhất) để tái hiện lỗi, đính kèm <code>Console Log</code> và <code>Network Trace</code> ngay trong ticket.
           </p>
         </div>
@@ -28,7 +28,7 @@ const props = defineProps<{
         <div class="group relative overflow-hidden rounded-2xl border border-pink-500/30 bg-slate-800/50 p-6 transition-all hover:bg-pink-500/10">
           <div class="mb-4 text-4xl group-hover:scale-110 transition-transform">🕵️</div>
           <h3 class="mb-2 text-xl font-bold text-pink-400">MITM Proxy & Mocking</h3>
-          <p class="text-sm leading-relaxed text-slate-400">
+          <p class="text-md leading-relaxed text-slate-400">
             Sử dụng <b>Proxyman/Charles</b> để <i>Map Local</i>. Ép API trả về lỗi 500, 403 hoặc data cực lớn để test độ bền của UI mà không cần can thiệp vào Source Code.
           </p>
         </div>
@@ -36,7 +36,7 @@ const props = defineProps<{
         <div class="group relative overflow-hidden rounded-2xl border border-pink-500/30 bg-slate-800/50 p-6 transition-all hover:bg-pink-500/10">
           <div class="mb-4 text-4xl group-hover:scale-110 transition-transform">🤖</div>
           <h3 class="text-xl font-bold text-pink-400">Visual Regression AI</h3>
-          <p class="text-sm leading-relaxed text-slate-400">
+          <p class="text-md leading-relaxed text-slate-400">
             Ứng dụng <b>Applitools</b> hoặc <b>Playwright Visual</b> để phát hiện lệch pixel, sai font hoặc vỡ layout tự động trên hàng trăm kích thước màn hình cùng lúc.
           </p>
         </div>
@@ -64,7 +64,7 @@ const props = defineProps<{
 
       <div class="mt-8 flex items-center justify-center gap-4 rounded-full border border-pink-500/20 bg-pink-500/5 py-3 shadow-inner">
         <span class="animate-pulse text-pink-500 font-mono">⚡</span>
-        <p class="text-sm font-semibold text-pink-100 italic">
+        <p class="text-md font-semibold text-pink-100 italic">
           "QA giỏi không chỉ tìm ra Bug, mà còn cung cấp đủ dữ liệu để Dev sửa Bug trong 1 nốt nhạc."
         </p>
       </div>

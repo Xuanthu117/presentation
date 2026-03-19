@@ -11,7 +11,7 @@ const props = defineProps<{
 <template>
   <BaseSlide :id="props.id" :number="props.number">
     <div class="mx-auto flex w-full max-w-4xl flex-col items-center text-center">
-      <span class="mb-6 inline-block rounded-full bg-pink-900 px-3 py-1 text-sm font-semibold text-pink-300">🔥 Call to Action</span>
+      <span class="mb-6 inline-block rounded-full bg-pink-900 px-3 py-1 text-md font-semibold text-pink-300">🔥 Call to Action</span>
       <h2 class="mb-12 bg-gradient-to-r from-pink-500 to-yellow-500 bg-clip-text text-5xl font-extrabold tracking-tight text-transparent md:text-7xl">
         Bắt Đầu Level-Up Từ Hôm Nay!
       </h2>

@@ -98,14 +98,14 @@ function runCheckoutDebugger() {
                     <h2 class="text-4xl font-extrabold tracking-tight text-white">
                         DevTools Debugger in 60s
                     </h2>
-                    <p class="mt-3 max-w-2xl text-sm leading-relaxed text-slate-300">
+                    <p class="mt-3 max-w-2xl text-md leading-relaxed text-slate-300">
                         Stop guessing with <code>console.log()</code>. Open DevTools, trigger the bug, and use the <span class="rounded bg-slate-800 px-1.5 py-0.5 font-mono text-cyan-300">debugger</span> keyword to freeze the application state exactly where it fails.
                     </p>
                 </div>
 
                 <div class="flex items-center gap-3 rounded-xl border border-amber-500/20 bg-amber-500/10 px-5 py-3 shadow-lg">
                     <div class="text-2xl">⌨️</div>
-                    <div class="text-sm font-medium text-amber-200">
+                    <div class="text-md font-medium text-amber-200">
                         Press <kbd class="rounded border border-amber-500/30 bg-amber-950 px-2 py-1 font-mono">F12</kbd> or <kbd class="rounded border border-amber-500/30 bg-amber-950 px-2 py-1 font-mono">Cmd+Opt+I</kbd> to start.
                     </div>
                 </div>
@@ -122,7 +122,7 @@ function runCheckoutDebugger() {
                                     <div class="h-3 w-3 rounded-full bg-amber-500/80"></div>
                                     <div class="h-3 w-3 rounded-full bg-emerald-500/80"></div>
                                 </div>
-                                <h3 class="text-sm font-bold text-slate-300">CheckoutService.ts</h3>
+                                <h3 class="text-md font-bold text-slate-300">CheckoutService.ts</h3>
                             </div>
                             <div class="flex items-center gap-2">
                                 <span class="text-[10px] font-bold uppercase tracking-widest text-slate-500">Status:</span>
@@ -147,7 +147,7 @@ function runCheckoutDebugger() {
                                     </button>
                                 </div>
 
-                                <div class="space-y-2 font-mono text-sm">
+                                <div class="space-y-2 font-mono text-md">
                                     <div class="flex justify-between rounded bg-slate-950/50 px-3 py-2 text-slate-300">
                                         <span class="text-slate-500">quantity:</span>
                                         <span class="font-bold" :class="quantity > 2 ? 'text-amber-400' : 'text-cyan-400'">{{ quantity }}</span>
@@ -162,7 +162,7 @@ function runCheckoutDebugger() {
                                     </div>
                                 </div>
 
-                                <label class="mt-5 flex cursor-pointer items-center gap-3 rounded-lg border border-slate-700 bg-slate-800/50 px-3 py-2 text-sm text-slate-300 hover:bg-slate-800">
+                                <label class="mt-5 flex cursor-pointer items-center gap-3 rounded-lg border border-slate-700 bg-slate-800/50 px-3 py-2 text-md text-slate-300 hover:bg-slate-800">
                                     <input v-model="enableExpress" type="checkbox" class="h-4 w-4 rounded border-slate-600 bg-slate-900 accent-cyan-500" />
                                     Express Shipping (+$15)
                                 </label>
@@ -171,7 +171,7 @@ function runCheckoutDebugger() {
                             <div class="bg-slate-900/30 p-5">
                                 <h4 class="mb-4 text-xs font-bold uppercase tracking-widest text-slate-500">UI Render (Result)</h4>
                                 
-                                <div class="space-y-2 text-sm">
+                                <div class="space-y-2 text-md">
                                     <div class="flex justify-between text-slate-400">
                                         <span>Subtotal:</span>
                                         <span class="font-mono">${{ subtotal }}</span>
@@ -192,10 +192,10 @@ function runCheckoutDebugger() {
                                 </div>
 
                                 <div class="mt-6 flex gap-3">
-                                    <button type="button" class="flex-1 rounded-lg bg-cyan-500 py-2.5 text-sm font-bold text-slate-950 transition-all hover:bg-cyan-400 active:scale-95 shadow-lg shadow-cyan-500/20" @click="runCheckoutDebugger">
+                                    <button type="button" class="flex-1 rounded-lg bg-cyan-500 py-2.5 text-md font-bold text-slate-950 transition-all hover:bg-cyan-400 active:scale-95 shadow-lg shadow-cyan-500/20" @click="runCheckoutDebugger">
                                         ▶ Run Debugger
                                     </button>
-                                    <button type="button" class="rounded-lg border border-slate-600 bg-transparent px-4 py-2.5 text-sm font-bold text-slate-300 transition-all hover:bg-slate-800 active:scale-95" @click="resetDemo">
+                                    <button type="button" class="rounded-lg border border-slate-600 bg-transparent px-4 py-2.5 text-md font-bold text-slate-300 transition-all hover:bg-slate-800 active:scale-95" @click="resetDemo">
                                         Reset
                                     </button>
                                 </div>
@@ -224,7 +224,7 @@ function runCheckoutDebugger() {
 
                 <div class="flex flex-col gap-4">
                     <div class="rounded-2xl border border-indigo-500/20 bg-indigo-500/10 p-5">
-                        <h3 class="mb-3 flex items-center gap-2 text-sm font-bold text-indigo-300 uppercase tracking-widest">
+                        <h3 class="mb-3 flex items-center gap-2 text-md font-bold text-indigo-300 uppercase tracking-widest">
                             <span class="text-lg">🎤</span> Presenter Script
                         </h3>
                         <ol class="space-y-3 text-[13px] leading-relaxed text-slate-300">

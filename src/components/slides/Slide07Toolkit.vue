@@ -19,21 +19,21 @@ const props = defineProps<{
             <div class="mr-4 text-3xl">💻</div>
             <div>
               <h4 class="text-lg font-bold text-cyan-400">Dev Tools (Core)</h4>
-              <p class="text-sm text-slate-300">VS Code Debugger, Chrome DevTools (Elements, Sources)</p>
+              <p class="text-md text-slate-300">VS Code Debugger, Chrome DevTools (Elements, Sources)</p>
             </div>
           </div>
           <div class="flex items-center rounded-lg bg-slate-800/50 p-4">
             <div class="mr-4 text-3xl">📊</div>
             <div>
               <h4 class="text-lg font-bold text-purple-400">Observability (Advanced)</h4>
-              <p class="text-sm text-slate-300">Log Aggregation (Kibana), APM (Datadog), Distributed Tracing</p>
+              <p class="text-md text-slate-300">Log Aggregation (Kibana), APM (Datadog), Distributed Tracing</p>
             </div>
           </div>
           <div class="flex items-center rounded-lg bg-slate-800/50 p-4">
             <div class="mr-4 text-3xl">🧪</div>
             <div>
               <h4 class="text-lg font-bold text-pink-400">Testing & Proxy</h4>
-              <p class="text-sm text-slate-300">Charles Proxy, Postman, Cypress (E2E), Pact (Contract Test)</p>
+              <p class="text-md text-slate-300">Charles Proxy, Postman, Cypress (E2E), Pact (Contract Test)</p>
             </div>
           </div>
         </div>

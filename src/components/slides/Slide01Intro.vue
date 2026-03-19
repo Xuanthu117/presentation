@@ -27,7 +27,7 @@ const props = defineProps<{
       </div>
       <div class="card card-pink">
         <h3 class="mb-2 text-center text-xl font-bold text-white">Thực tế: Quỹ thời gian Dev bị "bòn rút"</h3>
-        <p class="mb-4 text-center text-sm text-slate-400">Thống kê trung bình thời gian trong một Sprint</p>
+        <p class="mb-4 text-center text-md text-slate-400">Thống kê trung bình thời gian trong một Sprint</p>
         <TimeAllocationChart />
       </div>
     </div>

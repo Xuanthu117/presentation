@@ -11,7 +11,7 @@ const props = defineProps<{
   <BaseSlide :id="props.id" :number="props.number">
     <div class="mx-auto w-full max-w-5xl">
       <div class="mb-10 text-center">
-        <span class="mb-4 inline-flex items-center gap-2 rounded-full bg-yellow-500/10 border border-yellow-500/20 px-4 py-1 text-sm font-bold text-yellow-500 shadow-sm">
+        <span class="mb-4 inline-flex items-center gap-2 rounded-full bg-yellow-500/10 border border-yellow-500/20 px-4 py-1 text-md font-bold text-yellow-500 shadow-sm">
           <span class="relative flex h-2 w-2">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
             <span class="relative inline-flex rounded-full h-2 w-2 bg-yellow-500"></span>
@@ -74,7 +74,7 @@ const props = defineProps<{
           </p>
           <div class="mt-2 flex items-center gap-4">
             <div class="h-px w-12 bg-slate-700"></div>
-            <span class="text-sm font-mono text-slate-500 tracking-widest uppercase">Summary Checklist</span>
+            <span class="text-md font-mono text-slate-500 tracking-widest uppercase">Summary Checklist</span>
             <div class="h-px w-12 bg-slate-700"></div>
           </div>
           <div class="flex gap-6 text-xs font-bold text-slate-400 uppercase tracking-tighter">

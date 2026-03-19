@@ -28,7 +28,7 @@ const props = defineProps<{
                 <div class="text-md font-black uppercase tracking-tighter text-purple-400">Stoicism</div>
               </div>
             </div>
-            <p class="text-center text-sm font-bold text-white leading-tight">Bình tĩnh tuyệt đối<br/>khi Prod sập</p>
+            <p class="text-center text-md font-bold text-white leading-tight">Bình tĩnh tuyệt đối<br/>khi Prod sập</p>
           </div>
 
           <div class="group flex flex-col items-center">
@@ -38,7 +38,7 @@ const props = defineProps<{
                 <div class="text-md font-black uppercase tracking-tighter text-purple-400">Evidence</div>
               </div>
             </div>
-            <p class="text-center text-sm font-bold text-white leading-tight">Tuyệt đối<br/>không đoán mò</p>
+            <p class="text-center text-md font-bold text-white leading-tight">Tuyệt đối<br/>không đoán mò</p>
           </div>
 
           <div class="group flex flex-col items-center">
@@ -48,7 +48,7 @@ const props = defineProps<{
                 <div class="text-md font-black uppercase tracking-tighter text-purple-400">Persistence</div>
               </div>
             </div>
-            <p class="text-center text-sm font-bold text-white leading-tight">Kiên nhẫn<br/>đến tận cùng</p>
+            <p class="text-center text-md font-bold text-white leading-tight">Kiên nhẫn<br/>đến tận cùng</p>
           </div>
 
           <div class="group flex flex-col items-center">
@@ -58,7 +58,7 @@ const props = defineProps<{
                 <div class="text-md font-black uppercase tracking-tighter text-purple-400">Culture</div>
               </div>
             </div>
-            <p class="text-center text-sm font-bold text-white leading-tight">Văn hóa<br/>không đổ lỗi</p>
+            <p class="text-center text-md font-bold text-white leading-tight">Văn hóa<br/>không đổ lỗi</p>
           </div>
         </div>
       </div>
@@ -72,7 +72,7 @@ const props = defineProps<{
             <h3 class="text-4xl font-black text-white">
               Senior: <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent italic">Master of Debugging</span>
             </h3>
-            <p class="text-sm font-bold text-purple-400 uppercase tracking-[0.3em]">Understand the system, Rule the world</p>
+            <p class="text-md font-bold text-purple-400 uppercase tracking-[0.3em]">Understand the system, Rule the world</p>
           </div>
         </div>
         <div class="absolute -left-10 -top-10 h-32 w-32 rounded-full bg-purple-500/10 blur-3xl"></div>

@@ -29,7 +29,7 @@ const props = defineProps<{
           <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
             <div class="space-y-4">
               <div>
-                <h4 class="text-sm font-bold text-orange-300 uppercase mb-2">Network & Performance</h4>
+                <h4 class="text-md font-bold text-orange-300 uppercase mb-2">Network & Performance</h4>
                 <ul class="space-y-2 text-md text-slate-300">
                   <li><b>• Throttling:</b> Giả lập mạng 3G/Slow 3G để check Race Condition.</li>
                   <li><b>• HAR Export:</b> Xuất log mạng để BE/QA có thể "xem lại" lỗi.</li>
@@ -37,7 +37,7 @@ const props = defineProps<{
                 </ul>
               </div>
               <div>
-                <h4 class="text-sm font-bold text-orange-300 uppercase mb-2">Sources (The Real Debugger)</h4>
+                <h4 class="text-md font-bold text-orange-300 uppercase mb-2">Sources (The Real Debugger)</h4>
                 <ul class="space-y-2 text-md text-slate-300">
                   <li><b>• Conditional Breakpoints:</b> Chỉ dừng khi biến thỏa mãn điều kiện.</li>
                   <li><b>• Logpoints:</b> In log mà không cần sửa code (không cần console.log).</li>
@@ -47,7 +47,7 @@ const props = defineProps<{
 
             <div class="space-y-4">
               <div>
-                <h4 class="text-sm font-bold text-orange-300 uppercase mb-2">Elements & Console</h4>
+                <h4 class="text-md font-bold text-orange-300 uppercase mb-2">Elements & Console</h4>
                 <ul class="space-y-2 text-md text-slate-300">
                   <li><b>• DOM Breakpoints:</b> Tự động dừng khi một element bị thay đổi style/attr.</li>
                   <li><b>• CSS Mirror Editing:</b> Sửa CSS trực tiếp và đồng bộ ngược lại source.</li>
@@ -85,7 +85,7 @@ const props = defineProps<{
           </div>
 
           <div class="group rounded-xl border border-blue-500/30 bg-blue-500/5 p-4 transition-all hover:bg-blue-500/10">
-            <h4 class="mb-1 text-sm font-bold text-blue-400 flex items-center justify-center gap-2">
+            <h4 class="mb-1 text-md font-bold text-blue-400 flex items-center justify-center gap-2">
               Postman / Insomnia
             </h4>
             <p class="text-md text-slate-500 text-center leading-relaxed">

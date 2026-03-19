@@ -33,30 +33,6 @@ import SlideExamplePerformance
 import SlideFETools from './components/slides/SlideFETools.vue';
 import SlideQATools from './components/slides/SlideQATools.vue';
 
-const slideItems = [
-  "Cover",
-  "Intro",
-  "Mindset",
-  "Mistakes",
-  "Method",
-  "Isolation",
-  "Metrics",
-  "Toolkit",
-  "IDE Tips",
-  "Frontend",
-  "Backend",
-  "QA",
-  "Collab",
-  "Level Up",
-  "FE Tools",
-  "BE Tools",
-  "QA Tools",
-  "Tips",
-  "Profile",
-  "Summary",
-  "CTA",
-];
-
 const containerRef = ref<HTMLElement | null>(null);
 const slideElements = ref<HTMLElement[]>([]);
 const currentSlideIndex = ref(0);
@@ -148,121 +124,154 @@ onMounted(async () => {
 onBeforeUnmount(() => {
   observer?.disconnect();
 });
+
 const Slides = computed(() => {
   return [
     {
+      name: "Cover",
       id: 0,
       number: 0,
       component: Slide00Cover,
     },
     {
+      name: "Intro",
       id: 1,
       number: 1,
       component: Slide01Intro,
     },
     {
+      name: "Mindset",
       id: 2,
       number: 2,
       component: Slide02Mindset,
     },
     {
+      name: "Mistakes",
       id: 3,
       number: 3,
       component: Slide03Mistakes,
     },
     {
+      name: "Method",
       id: 4,
       number: 4,
       component: Slide04ScientificMethod,
     },
     {
+      name: "Isolation",
       id: 5,
       number: 5,
       component: Slide05Isolation,
     },
     {
+      name: "Metrics",
       id: 6,
       number: 6,
       component: Slide06Metrics,
     },
+    { name: "Toolkit", id: 7, number: 7, component: Slide07Toolkit },
     {
-      id: 7,
-      number: 7,
-      component: Slide07Toolkit,
-    },
-    {
+      name: "IDE Tips",
       id: 8,
       number: 8,
       component: Slide08IdeTips,
     },
     {
+      name: "Frontend",
       id: 9,
       number: 9,
       component: Slide09Frontend,
     },
     {
+      name: "Backend",
       id: 10,
       number: 10,
       component: Slide10Backend,
     },
     {
+      name: "QA",
       id: 11,
       number: 11,
       component: Slide11Qa,
     },
     {
+      name: "Collaboration",
       id: 12,
       number: 12,
       component: Slide12Collaboration,
     },
     {
+      name: "Level Up",
       id: 13,
       number: 13,
       component: Slide13LevelUp,
     },
-    {      id: 14,
+    {
+      name: "Frontend Tools",
+      id: 14,
       number: 14,
       component: SlideFETools,
     },
     {
+      name: "Backend Tools",
       id: 15,
       number: 15,
       component: SlideBETools,
     },
     {
+      name: "QA Tools",
       id: 16,
       number: 16,
       component: SlideQATools,
     },
     {
+      name: "Tips",
       id: 17,
       number: 17,
       component: Slide14Tips,
     },
     {
+      name: "Profile",
       id: 18,
       number: 18,
       component: Slide15Profile,
     },
     {
+      name: "Summary",
       id: 19,
       number: 19,
       component: Slide16Summary,
     },
     {
+      name: "CTA",
       id: 20,
       number: 20,
       component: Slide17Cta,
     },
-    {id: 21,
+    {
+      name: "Example Devtools",
+      id: 21,
       number: 21,
       component: SlideExampleDevtools,
-    },{
+    },
+    {
+      name: "Example Performance",
       id: 22,
       number: 22,
       component: SlideExamplePerformance,
-    }
+    },
   ];
+});
+
+const slideItems = computed(() => Slides.value.map((slide) => slide.name));
+const progressPercentage = computed(() => {
+  const totalSlides = slideItems.value.length;
+
+  if (totalSlides === 0) {
+    return 0;
+  }
+
+  return Math.round(((currentSlideIndex.value + 1) / totalSlides) * 100);
 });
 </script>
 
@@ -276,24 +285,7 @@ const Slides = computed(() => {
         :id="slide.id"
         :number="slide.number"
         :on-restart="scrollToStart"
-        
       />
-      <!-- <Slide06Metrics />
-      <Slide07Toolkit />
-      <Slide08IdeTips />
-      <Slide09Frontend />
-      <Slide10Backend />
-      <Slide11Qa />
-      <Slide12Collaboration />
-      <Slide13LevelUp />
-       <Slide14Tips />
-      <SlideFETools />
-      <SlideBETools id="slide-16" number="16"/>
-      <SlideQATools/>
-     
-      <Slide15Profile />
-      <Slide16Summary />
-      <Slide17Cta :on-restart="scrollToStart" /> -->
     </div>
 
     <button
@@ -344,5 +336,16 @@ const Slides = computed(() => {
         </li>
       </ol>
     </nav>
+    <div class="slide-indicator__progress">
+      <div class="slide-indicator__progress-bar">
+        <span
+          class="slide-indicator__progress-fill"
+          :style="{ width: `${progressPercentage}%` }"
+        ></span>
+      </div>
+      <span class="slide-indicator__progress-text"
+        >{{ progressPercentage }}%</span
+      >
+    </div>
   </div>
 </template>

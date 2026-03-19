@@ -147,7 +147,7 @@ async function runScenario() {
 					<h2 class="text-4xl font-extrabold tracking-tight text-white">
 						Find the Root Cause of a Slow Interaction
 					</h2>
-					<p class="mt-3 max-w-3xl text-sm leading-relaxed text-slate-300">
+					<p class="mt-3 max-w-3xl text-md leading-relaxed text-slate-300">
 						Mô phỏng một interaction chậm với <span class="font-mono text-orange-300">long task</span>,
 						<span class="font-mono text-orange-300"> slow render</span>, rồi dừng tại
 						<span class="rounded bg-slate-800 px-1.5 py-0.5 font-mono text-cyan-300">debugger</span>
@@ -155,7 +155,7 @@ async function runScenario() {
 					</p>
 				</div>
 
-				<div class="rounded-2xl border border-cyan-500/20 bg-cyan-500/10 px-4 py-3 text-sm text-cyan-100">
+				<div class="rounded-2xl border border-cyan-500/20 bg-cyan-500/10 px-4 py-3 text-md text-cyan-100">
 					DevTools → Performance → Record → Run Scenario
 				</div>
 			</div>
@@ -170,7 +170,7 @@ async function runScenario() {
 									<div class="h-3 w-3 rounded-full bg-amber-500/80"></div>
 									<div class="h-3 w-3 rounded-full bg-emerald-500/80"></div>
 								</div>
-								<h3 class="text-sm font-bold text-slate-300">DashboardInteraction.ts</h3>
+								<h3 class="text-md font-bold text-slate-300">DashboardInteraction.ts</h3>
 							</div>
 
 							<span
@@ -191,7 +191,7 @@ async function runScenario() {
 								<h4 class="mb-4 text-xs font-bold uppercase tracking-widest text-slate-500">Scenario Controls</h4>
 
 								<div class="space-y-4">
-									<label class="block text-sm text-slate-300">
+									<label class="block text-md text-slate-300">
 										<div class="mb-1 flex items-center justify-between">
 											<span>Rows to render</span>
 											<span class="font-mono text-cyan-300">{{ rowCount }}</span>
@@ -199,7 +199,7 @@ async function runScenario() {
 										<input v-model="rowCount" type="range" min="80" max="500" step="20" class="w-full accent-cyan-500" />
 									</label>
 
-									<label class="block text-sm text-slate-300">
+									<label class="block text-md text-slate-300">
 										<div class="mb-1 flex items-center justify-between">
 											<span>CPU work multiplier</span>
 											<span class="font-mono text-cyan-300">{{ cpuMultiplier }}</span>
@@ -207,7 +207,7 @@ async function runScenario() {
 										<input v-model="cpuMultiplier" type="range" min="6" max="40" step="2" class="w-full accent-orange-500" />
 									</label>
 
-									<label class="flex cursor-pointer items-center gap-3 rounded-lg border border-slate-700 bg-slate-800/60 px-3 py-2 text-sm text-slate-300">
+									<label class="flex cursor-pointer items-center gap-3 rounded-lg border border-slate-700 bg-slate-800/60 px-3 py-2 text-md text-slate-300">
 										<input v-model="useOptimizedMode" type="checkbox" class="h-4 w-4 accent-emerald-500" />
 										Apply fix mode: cap rows and reduce formatter cost
 									</label>
@@ -216,14 +216,14 @@ async function runScenario() {
 								<div class="mt-5 grid grid-cols-2 gap-3">
 									<button
 										type="button"
-										class="rounded-lg bg-orange-500 py-2.5 text-sm font-bold text-slate-950 transition hover:bg-orange-400"
+										class="rounded-lg bg-orange-500 py-2.5 text-md font-bold text-slate-950 transition hover:bg-orange-400"
 										@click="runScenario"
 									>
 										Run Scenario
 									</button>
 									<button
 										type="button"
-										class="rounded-lg border border-slate-600 px-4 py-2.5 text-sm font-bold text-slate-300 transition hover:bg-slate-800"
+										class="rounded-lg border border-slate-600 px-4 py-2.5 text-md font-bold text-slate-300 transition hover:bg-slate-800"
 										@click="resetScenario"
 									>
 										Reset
@@ -232,7 +232,7 @@ async function runScenario() {
 
 								<div class="mt-5 rounded-xl border border-slate-800 bg-slate-950/70 p-4">
 									<h5 class="mb-2 text-xs font-bold uppercase tracking-widest text-slate-500">Root Cause</h5>
-									<p class="text-sm leading-relaxed text-slate-300">{{ rootCause }}</p>
+									<p class="text-md leading-relaxed text-slate-300">{{ rootCause }}</p>
 								</div>
 							</div>
 
@@ -271,7 +271,7 @@ async function runScenario() {
 											class="rounded-xl border border-slate-800 bg-slate-900/80 px-3 py-2"
 										>
 											<div class="flex items-center justify-between gap-3">
-												<span class="truncate text-sm font-medium text-slate-200">{{ row.title }}</span>
+												<span class="truncate text-md font-medium text-slate-200">{{ row.title }}</span>
 												<span class="rounded-full bg-slate-800 px-2 py-0.5 text-[10px] uppercase tracking-wider text-slate-400">
 													{{ row.badge }}
 												</span>
@@ -303,7 +303,7 @@ state.rows = rows;
 
 				<div class="flex flex-col gap-4">
 					<div class="rounded-2xl border border-indigo-500/20 bg-indigo-500/10 p-5">
-						<h3 class="mb-3 text-sm font-bold uppercase tracking-widest text-indigo-300">Presenter Script</h3>
+						<h3 class="mb-3 text-md font-bold uppercase tracking-widest text-indigo-300">Presenter Script</h3>
 						<ol class="space-y-3 text-[13px] leading-relaxed text-slate-300">
 							<li>1. Start with fix mode off and run a Performance recording.</li>
 							<li>2. Point at the long purple/yellow block on the main thread timeline.</li>
@@ -313,7 +313,7 @@ state.rows = rows;
 					</div>
 
 					<div class="rounded-2xl border border-emerald-500/20 bg-emerald-500/10 p-5">
-						<h3 class="mb-3 text-sm font-bold uppercase tracking-widest text-emerald-300">Breakdown Strategy</h3>
+						<h3 class="mb-3 text-md font-bold uppercase tracking-widest text-emerald-300">Breakdown Strategy</h3>
 						<ul class="space-y-3 text-[13px] leading-relaxed text-slate-300">
 							<li>Long Task: isolate CPU-heavy synchronous work first.</li>
 							<li>Render Cost: count DOM nodes and expensive formatting next.</li>

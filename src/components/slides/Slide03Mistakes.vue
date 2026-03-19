@@ -52,23 +52,23 @@ const props = defineProps<{
       </div>
 
       <div class="mt-10 rounded-2xl border border-slate-700 bg-slate-800/30 p-8 shadow-inner">
-        <h4 class="mb-6 text-center text-sm font-bold uppercase tracking-widest text-slate-500">
+        <h4 class="mb-6 text-center text-md font-bold uppercase tracking-widest text-slate-500">
           Sự Thật Phũ Phàng: 80% Bug Đến Từ Đâu?
         </h4>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div class="text-center">
             <div class="text-2xl font-black text-red-500">45%</div>
-            <div class="mt-1 text-sm font-bold text-slate-200">Unmanaged State</div>
+            <div class="mt-1 text-md font-bold text-slate-200">Unmanaged State</div>
             <p class="mt-2 text-md] text-slate-500">Dữ liệu bị mutate bất ngờ, race conditions hoặc sync sai giữa các component.</p>
           </div>
           <div class="text-center">
             <div class="text-2xl font-black text-red-500">30%</div>
-            <div class="mt-1 text-sm font-bold text-slate-200">Edge Case "Quên" Test</div>
+            <div class="mt-1 text-md font-bold text-slate-200">Edge Case "Quên" Test</div>
             <p class="mt-2 text-md] text-slate-500">Dữ liệu null/undefined, mảng rỗng, hoặc payload API trả về cấu hình lạ.</p>
           </div>
           <div class="text-center">
             <div class="text-2xl font-black text-red-500">25%</div>
-            <div class="mt-1 text-sm font-bold text-slate-200">Side Effects (Legacy)</div>
+            <div class="mt-1 text-md font-bold text-slate-200">Side Effects (Legacy)</div>
             <p class="mt-2 text-md] text-slate-500">Sửa chỗ này nhưng vỡ chỗ kia do thiếu <b>Regression Testing</b>.</p>
           </div>
         </div>
@@ -76,7 +76,7 @@ const props = defineProps<{
 
       <div class="mt-8 text-center">
         <div class="inline-block rounded-full bg-red-500/10 px-6 py-2 border border-red-500/20">
-           <p class="text-sm font-semibold text-red-400 italic">
+           <p class="text-md font-semibold text-red-400 italic">
             👉 "Sửa Bug mà không hiểu tại sao mình sửa được, chính là tạo ra Bug tiếp theo."
           </p>
         </div>

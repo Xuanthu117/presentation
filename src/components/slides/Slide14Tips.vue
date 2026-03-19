@@ -11,7 +11,7 @@ const props = defineProps<{
   <BaseSlide :id="props.id" :number="props.number">
     <div class="mx-auto w-full max-w-6xl">
       <div class="mb-10 text-center">
-        <span class="mb-4 inline-flex items-center gap-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 px-4 py-1 text-sm font-bold text-cyan-400">
+        <span class="mb-4 inline-flex items-center gap-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 px-4 py-1 text-md font-bold text-cyan-400">
           ⚡ Actionable & AI Tips
         </span>
         <h2 class="text-4xl font-extrabold text-white tracking-tight">Tips Thực Chiến & Ứng Dụng AI</h2>
@@ -49,7 +49,7 @@ const props = defineProps<{
               <h4 class="flex items-center gap-2 font-bold text-white mb-1">
                 <span class="text-purple-400">🤖</span> Prompt "Context-First"
               </h4>
-              <p class="text-sm text-slate-400 leading-relaxed">
+              <p class="text-md text-slate-400 leading-relaxed">
                 Đừng chỉ đưa lỗi. Hãy đưa: <b>Code hiện tại + Lỗi + Mong muốn</b>. AI sẽ phân tích được data flow thay vì chỉ check cú pháp.
               </p>
             </div>
@@ -58,7 +58,7 @@ const props = defineProps<{
               <h4 class="flex items-center gap-2 font-bold text-white mb-1">
                 <span class="text-purple-400">🔍</span> "Explain this Stack Trace"
               </h4>
-              <p class="text-sm text-slate-400 leading-relaxed">
+              <p class="text-md text-slate-400 leading-relaxed">
                 Dán toàn bộ log lỗi vào AI và hỏi: <i>"Phân tích nguyên nhân tiềm ẩn và liệt kê 3 bước kiểm tra nhanh."</i>
               </p>
             </div>
@@ -67,7 +67,7 @@ const props = defineProps<{
               <h4 class="flex items-center gap-2 font-bold text-white mb-1">
                 <span class="text-purple-400">🧪</span> AI-Generated Unit Tests
               </h4>
-              <p class="text-sm text-slate-400 leading-relaxed">
+              <p class="text-md text-slate-400 leading-relaxed">
                 Sau khi fix, hãy yêu cầu AI: <i>"Viết 5 test cases bao gồm edge cases cho hàm này để tránh regression."</i>
               </p>
             </div>

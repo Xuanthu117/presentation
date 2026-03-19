@@ -22,7 +22,7 @@ const props = defineProps<{
           </h3>
           <div class="space-y-6">
             <div class="space-y-2">
-              <b class="text-pink-300 text-sm italic">Cypress / Playwright Dashboard:</b>
+              <b class="text-pink-300 text-md italic">Cypress / Playwright Dashboard:</b>
               <p class="text-md text-slate-400 leading-relaxed">
                 <b>• Time-travel Debugging:</b> Di chuột qua từng dòng lệnh test để xem trạng thái UI tại đúng thời điểm đó.
               </p>
@@ -31,7 +31,7 @@ const props = defineProps<{
               </p>
             </div>
             <div class="space-y-2">
-              <b class="text-pink-300 text-sm italic">Cross-browser Consistency:</b>
+              <b class="text-pink-300 text-md italic">Cross-browser Consistency:</b>
               <p class="text-md text-slate-400 leading-relaxed">
                 <b>• Selenium / BrowserStack:</b> Debug lỗi chỉ xuất hiện trên một trình duyệt hoặc thiết bị cụ thể (ví dụ: Mobile Safari).
               </p>
@@ -46,7 +46,7 @@ const props = defineProps<{
           </h3>
           <div class="space-y-6">
             <div class="space-y-2">
-              <b class="text-indigo-300 text-sm italic">Postman Advanced:</b>
+              <b class="text-indigo-300 text-md italic">Postman Advanced:</b>
               <p class="text-md text-slate-400 leading-relaxed">
                 <b>• Scripting:</b> Tự động kiểm tra JSON Schema và Validate dữ liệu trả về ngay khi chạy test.
               </p>
@@ -55,7 +55,7 @@ const props = defineProps<{
               </p>
             </div>
             <div class="space-y-2">
-              <b class="text-indigo-300 text-sm italic">Performance Bottlenecks:</b>
+              <b class="text-indigo-300 text-md italic">Performance Bottlenecks:</b>
               <p class="text-md text-slate-400 leading-relaxed">
                 <b>• JMeter / k6:</b> Debug lỗi "Race Condition" hoặc "Memory Leak" khi hệ thống bị quá tải bởi hàng nghìn request cùng lúc.
               </p>
